@@ -1,17 +1,16 @@
 const express = require('express');
-const TrafficController = require('../controllers/trafficController');
-const UserController = require('../controllers/userController');
-
 const router = express.Router();
-const trafficController = new TrafficController();
-const userController = new UserController();
+const trafficController = require('../controllers/trafficController');
 
-// Traffic data routes
-router.get('/traffic', trafficController.getTrafficData.bind(trafficController));
-router.post('/traffic', trafficController.updateTrafficData.bind(trafficController));
+// Traffic flow routes
+router.get('/traffic', trafficController.getTrafficData);
+router.get('/traffic/incidents', trafficController.getTrafficIncidents);
 
-// User authentication routes
-router.post('/register', userController.registerUser.bind(userController));
-router.post('/login', userController.loginUser.bind(userController));
+// Weather data route
+router.get('/weather', trafficController.getWeatherData);
+
+// Historical data routes
+router.get('/traffic/history', trafficController.getHistoricalTrafficData);
+router.get('/traffic/stats', trafficController.getTrafficStats);
 
 module.exports = router;
