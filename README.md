@@ -52,7 +52,7 @@ Citrak
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/Citrak.git
+   git clone https://github.com/gaganv007/Citrak.git
    ```
 
 2. Navigate to the backend directory and install dependencies:
@@ -62,7 +62,7 @@ Citrak
    ```
 
 3. Set up environment variables:
-   - Copy `.env.example` to `.env` and fill in the required values.
+   - Set up the `.env` and update the api values.
 
 4. Start the backend server:
    ```
@@ -88,7 +88,3 @@ Citrak
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
