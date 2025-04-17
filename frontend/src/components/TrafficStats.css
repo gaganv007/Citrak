@@ -1,0 +1,51 @@
+.traffic-stats {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+  }
+  
+  .traffic-stats h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .traffic-stats ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .traffic-stats li {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    line-height: 1.5;
+  }
+  
+  .traffic-stats li:last-child {
+    border-bottom: none;
+  }
+  
+  .traffic-stats strong {
+    color: #444;
+  }
+  
+  /* Congestion level colors */
+  .low {
+    color: #4caf50;
+  }
+  
+  .moderate {
+    color: #ff9800;
+  }
+  
+  .high {
+    color: #f44336;
+  }
+  
+  .traffic-stats li:hover {
+    background-color: #f9f9f9;
+  }

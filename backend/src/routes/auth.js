@@ -1,17 +1,30 @@
 const express = require('express');
-const UserController = require('../controllers/userController');
-
+const jwt = require('jsonwebtoken');
 const router = express.Router();
-const userController = new UserController();
+const userController = require('../controllers/userController');
+const config = require('../config');
 
-// User registration route
-router.post('/register', (req, res) => {
-    userController.registerUser(req, res);
-});
+// Auth middleware to protect routes
+const authMiddleware = (req, res, next) => {
+  const token = req.headers.authorization?.split(' ')[1];
+  
+  if (!token) {
+    return res.status(401).json({ error: 'Access denied. No token provided.' });
+  }
+  
+  try {
+    const decoded = jwt.verify(token, config.auth.jwtSecret);
+    req.user = decoded;
+    next();
+  } catch (error) {
+    res.status(401).json({ error: 'Invalid token' });
+  }
+};
 
-// User login route
-router.post('/login', (req, res) => {
-    userController.loginUser(req, res);
-});
+// Auth routes
+router.post('/register', userController.register);
+router.post('/login', userController.login);
+router.get('/profile', authMiddleware, userController.getProfile);
+router.put('/preferences', authMiddleware, userController.updatePreferences);
 
 module.exports = router;

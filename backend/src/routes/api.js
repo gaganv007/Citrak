@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+
+// Import traffic controller
 const trafficController = require('../controllers/trafficController');
 
 // Traffic flow routes
