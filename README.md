@@ -46,7 +46,7 @@ Citrak
 ### Prerequisites
 
 - Node.js (version 14 or higher)
-- npm (Node package manager)
+- npm
 
 ### Installation
 
