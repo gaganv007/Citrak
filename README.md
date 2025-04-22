@@ -9,38 +9,6 @@ Citrak is a dynamic web application designed to provide real-time traffic data a
 - **Traffic Statistics**: Provides detailed statistics on traffic conditions, including congestion levels and location-based data.
 - **Responsive Design**: Ensures a seamless experience across different devices.
 
-## Project Structure
-
-```
-Citrak
-├── backend
-│   ├── src
-│   │   ├── controllers
-│   │   ├── models
-│   │   ├── routes
-│   │   ├── services
-│   │   ├── utils
-│   │   ├── config.js
-│   │   ├── app.js
-│   │   └── server.js
-│   ├── package.json
-│   └── .env.example
-├── frontend
-│   ├── public
-│   ├── src
-│   │   ├── components
-│   │   ├── pages
-│   │   ├── services
-│   │   ├── utils
-│   │   ├── App.jsx
-│   │   ├── index.jsx
-│   │   └── styles.css
-│   ├── package.json
-│   └── vite.config.js
-├── .gitignore
-└── README.md
-```
-
 ## Getting Started
 
 ### Prerequisites
